@@ -1,13 +1,14 @@
 //funcionalidad
 $(document).ready(function(e){
 	document.addEventListener("deviceready", function(){
-		alert('a');
+	
 		var src="";
 		$('#main ul li a').tap(function(){
 			src=$(this).attr('rel');
 			$('#descargar').attr('title',$(this).text());
 		});
 		$('#descargar a').tap(function(){
+			alert(src);
 			if($(this).text()=='Descargar'){
 				//Descarga de archivos con transaction
 			}
