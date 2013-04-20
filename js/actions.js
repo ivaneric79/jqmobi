@@ -11,6 +11,24 @@ $(document).ready(function(e){
 			alert(src);
 			if($(this).text()=='Descargar'){
 				//Descarga de archivos con transaction
+				var fileTransfer = new FileTransfer();
+var uri = encodeURI(src);
+
+fileTransfer.download(
+    uri,
+    'file:///mnt/miarchivo.mp3',
+    function(entry) {
+        alert("download complete: " + entry.fullPath);
+    },
+    function(error) {
+       alert("download error source " + error.source);
+        alert("download error target " + error.target);
+        alert("upload error code" + error.code);
+    }
+);
+
+				
+				
 			}
 			if($(this).text()=='Probar'){
 				//Play de media
