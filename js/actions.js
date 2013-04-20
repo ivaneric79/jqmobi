@@ -1,6 +1,7 @@
 //funcionalidad
 $(document).ready(function(e){
 	document.addEventListener("deviceready", function(){
+		alert('a');
 		var src="";
 		$('#main ul li a').tap(function(){
 			src=$(this).attr('rel');
