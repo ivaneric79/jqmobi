@@ -3,14 +3,14 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.cenet.hotel"
         version   = "0.0.1">
-    <name>jqmobi</name>
+    <name>Files</name>
 
     <description>
-        Aplicación de prácitca 1 Sábados.
+       app
     </description>
 
-    <author href="http://iwsoft.com.mx" email="ivaneric79@gmail.com">
-       iwsoft
+    <author href="http://www.iwsoft.com.mx" email="ivaneric79@gmail.com">
+        iWsoft
     </author>
 
       <feature name="http://api.phonegap.com/1.0/device" />
@@ -28,14 +28,17 @@
 <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />
 <plugin name="Media" value="org.apache.cordova.AudioHandler" />
 
-
-
     <preference name="phonegap-version" value="2.3.0" />
     <preference name="orientation"      value="portrait" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="true" />
 
-  
+    <icon src="img/logo.jpg" />
+    <icon src="img/logo.jpg"   gap:platform="android"    gap:density="ldpi" />
+    <icon src="img/logo.jpg"   gap:platform="ios"        width="57" height="57" />
+
+    <gap:splash src="img/screen.jpg"  gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="img/screen.jpg"    gap:platform="ios"     width="320" height="480" />
 	
 	<access origin="*" subdomains="true" />
 </widget>
