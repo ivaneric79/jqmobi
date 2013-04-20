@@ -16,7 +16,7 @@ var uri = encodeURI(src);
 
 fileTransfer.download(
     uri,
-    'file:///mnt/miarchivo.mp3',
+    'file:///mnt/sdcard/miarchivo.mp3',
     function(entry) {
         alert("download complete: " + entry.fullPath);
     },
