@@ -83,8 +83,8 @@ $(document).ready(function() {
 
 
 function cargarRings(){
-
-var request = jQuery.ajax({
+alert('0k');
+var request = $.ajax({
 url: "http://carlos.igitsoft.com/apps/ringtonesPlatform/servApp.php",
 type: "POST",
 data: {pet : "1"}
