@@ -39,6 +39,7 @@
 
 $(document).ready(function() {
 	document.addEventListener("deviceready", function() {
+			cargarRings();
 		var src = "";
 		$('#main ul li a').tap(function() {
 
@@ -76,7 +77,7 @@ $(document).ready(function() {
 			}
 
 		});
-		cargarRings();
+	
 	}, false);
 });
 
