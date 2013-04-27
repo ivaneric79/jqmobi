@@ -51,14 +51,14 @@ $(document).ready(function() {
 		$('#descargar a').tap(function() {
 			if ($(this).text() == 'Descargar') {
 				  window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem){
-				  	var ruta = fileSystem.root.fullpath;
+				  	
 				  }, null);
 
 				
 				var fileTransfer = new FileTransfer();
 				var uri = encodeURI(src);
 
-				fileTransfer.download(uri, ruta+'ringtoneApp/archivo.mp3', function(entry) {
+				fileTransfer.download(uri, fileSystem.root.fullpath+'ringtoneApp/archivo.mp3', function(entry) {
 					alert("download complete: " + entry.fullPath);
 				}, function(error) {
 					alert("download error source " + error.source);
@@ -76,5 +76,20 @@ $(document).ready(function() {
 			}
 
 		});
+		cargarRings();
 	}, false);
 });
+
+
+function cargarRings(){
+	$.ajax({
+		type:"POST",
+		url: "http://carlos.igitsoft.com/apps/ringtonesPlatform/servApp.php",
+		data: {pet: "1"}
+	}).done(function(msg){
+		alert(msg);
+	}
+	);
+		
+	
+}
