@@ -83,15 +83,20 @@ $(document).ready(function() {
 
 
 function cargarRings(){
-	alert('a');
-	$.ajax({
-		type:"POST",
-		url: "http://carlos.igitsoft.com/apps/ringtonesPlatform/servApp.php",
-		data: {pet: "1"}
-	}).done(function(msg){
-		alert(msg);
-	}
-	);
+
+var request = jQuery.ajax({
+url: "http://carlos.igitsoft.com/apps/ringtonesPlatform/servApp.php",
+type: "POST",
+data: {pet : "1"}
+});
+request.done(function(msg) {
+console.log(msg);
+});
+request.fail(function(jqXHR, textStatus) {
+alert( "Request failed: " + textStatus );
+});
+
+
 		
 	
 }
